@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <Item identifier="supplytablet"
+          category="Equipment"
+          subcategory="tools"
+          tags="smallitem,tool"
+          cargocontaineridentifier="metalcrate"
+          scale="0.5"
+          impactsoundtag="impact_metal_light"
+          maxstacksize="1"
+          isshootable="true">
+
+        <PreferredContainer primary="supplycab,engcab" amount="1" spawnprobability="0.08" />
+
+        <Price baseprice="350" minavailable="1">
+            <Price storeidentifier="merchantoutpost" minavailable="1" />
+            <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="1" />
+            <Price storeidentifier="merchantresearch" multiplier="1.1" minavailable="1" />
+            <Price storeidentifier="merchantmilitary" multiplier="1.05" minavailable="1" />
+            <Price storeidentifier="merchantengineering" multiplier="0.9" minavailable="1" />
+        </Price>
+
+        <Deconstruct time="10">
+            <Item identifier="fpgacircuit" />
+            <Item identifier="plastic" />
+            <Item identifier="copper" />
+        </Deconstruct>
+
+        <Fabricate suitablefabricators="fabricator" requiredtime="25">
+            <RequiredSkill identifier="electrical" level="25" />
+            <RequiredItem identifier="fpgacircuit" />
+            <RequiredItem identifier="plastic" amount="2" />
+            <RequiredItem identifier="copper" />
+        </Fabricate>
+
+        <InventoryIcon texture="%ModDir%/Sprites/supply_tablet.png"
+                       sourcerect="0,0,256,128"
+                       origin="0.5,0.5" />
+
+        <Sprite texture="%ModDir%/Sprites/supply_tablet.png"
+                sourcerect="0,0,256,128"
+                depth="0.55"
+                origin="0.5,0.5" />
+
+        <Body width="92" height="46" density="18" />
+        <AiTarget sight="300" staticsight="true" sonarlabel="entityname.supplytablet" />
+
+        <Holdable slots="Any,RightHand,LeftHand"
+                  holdpos="38,-22"
+                  aimpos="42,-20"
+                  handle1="-22,0"
+                  holdangle="20"
+                  msg="ItemMsgPickUpSelect" />
+
+        <CustomInterface canbeselected="true"
+                         drawhudwhenequipped="true"
+                         allowuioverlap="true"
+                         type="supplytablet">
+            <GuiFrame relativesize="0.46,0.62"
+                      minsize="620,520"
+                      maxsize="980,800"
+                      anchor="CenterLeft"
+                      pivot="CenterLeft"
+                      relativeoffset="0.006,0"
+                      style="ItemUI" />
+            <Button text="SUPPLY TABLET OFFLINE" connection="signal_out1" />
+            <Button text="LuaCs client interface is required for catalog, manifest and reports." connection="signal_out1" />
+            <Button text="Install/enable Lua For Barotrauma, reload Lua, then equip the tablet again." connection="signal_out1" />
+        </CustomInterface>
+    </Item>
+</Items>

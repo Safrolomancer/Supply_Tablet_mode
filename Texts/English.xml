@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+    <entityname.supplytablet>Supply Tablet</entityname.supplytablet>
+    <entitydescription.supplytablet>A rugged logistics tablet for planning outpost purchases, crew hires, storage allocation and pre-undocking supply checks.</entitydescription.supplytablet>
+
+    <supplytablet.medical>Medical supplies checked</supplytablet.medical>
+    <supplytablet.ammo>Ammunition checked</supplytablet.ammo>
+    <supplytablet.fuel>Fuel and tools checked</supplytablet.fuel>
+    <supplytablet.note>Supply note</supplytablet.note>
+    <supplytablet.lua_required>Supply tablet offline</supplytablet.lua_required>
+    <supplytablet.lua_hint>Enable Lua For Barotrauma and reload Lua to open the logistics terminal</supplytablet.lua_hint>
+</infotexts>

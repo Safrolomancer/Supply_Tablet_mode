@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Supply Tablet" modversion="1.0.0" gameversion="1.12.7.0" corepackage="false">
+    <Item file="%ModDir%/Items/supply_tablet.xml" />
+    <Text file="%ModDir%/Texts/English.xml" />
+    <Other file="%ModDir%/ModConfig.xml" />
+    <Other file="%ModDir%/Lua/Autorun/supply_tablet.lua" />
+    <Other file="%ModDir%/Lua/supply_items.lua" />
+    <Other file="%ModDir%/Lua/default_purchases.lua" />
+    <Other file="%ModDir%/Sprites/supply_tablet.png" />
+    <Other file="%ModDir%/preview.png" />
+</contentpackage>
